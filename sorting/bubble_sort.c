@@ -12,8 +12,9 @@ void swap(int *a, int *b) {
 
 /* Sorts arr[] in ascending order using bubble sort. */
 void bubble_sort(int arr[], int n) {
-    bool swapped;
+
     for(int i = 0; i < (n-1); i++) {
+        bool swapped;
         swapped = false;
         for(int j = 0; j < (n-1-i); j++) {
             if(arr[j] > arr[j+1]) {
