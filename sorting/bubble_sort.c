@@ -1,4 +1,7 @@
+// Optimized implementation of Bubble sort
+
 #include <stdio.h>
+#include <stdbool.h>
 
 //A swap implementation to swap elements after checking if the first element is greater than the next
 void swap(int *a, int *b) {
@@ -9,11 +12,17 @@ void swap(int *a, int *b) {
 
 /* Sorts arr[] in ascending order using bubble sort. */
 void bubble_sort(int arr[], int n) {
+    bool swapped;
     for(int i = 0; i < (n-1); i++) {
+        swapped = false;
         for(int j = 0; j < (n-1-i); j++) {
             if(arr[j] > arr[j+1]) {
                 swap(&arr[j], &arr[j+1]);
+                swapped = true;
             }
+        }
+        if(swapped == false) {
+            break;
         }
     }
 }
