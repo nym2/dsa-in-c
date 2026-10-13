@@ -28,3 +28,15 @@ void print_array(int arr[], int n) {
     }
     printf("]\n");
 }
+
+int main(void) {
+    int scores[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(scores) / sizeof(scores[0]);
+    // print, sort, print again
+    print_array(scores, n);
+
+    bubble_sort(scores, n);
+
+    print_array(scores, n);
+    return 0;
+}
