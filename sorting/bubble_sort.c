@@ -24,6 +24,7 @@ void bubble_sort(int arr[], int n) {
                 swapped = true;
             }
         }
+        //This means that no swaps means the array is sorted.
         if(!swapped) {
             break;
         }
