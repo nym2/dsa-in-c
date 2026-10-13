@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-//A swap implementation to swap elements after checking if the first element is greater than the next
+/* Exchanges the values pointed to by a and b. */
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
@@ -42,11 +42,13 @@ void print_array(int arr[], int n) {
 int main(void) {
     int scores[] = {64, 34, 25, 12, 22, 11, 90};
     int n = sizeof(scores) / sizeof(scores[0]);
-    // print, sort, print again
+
+    printf("Before: ");
     print_array(scores, n);
 
     bubble_sort(scores, n);
 
+    printf("After:  ");
     print_array(scores, n);
     return 0;
 }
